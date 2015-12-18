@@ -1,0 +1,14 @@
+//
+//  YFPrefixHeader.pch
+//  YFChat
+//
+//  Created by 李永方 on 15/12/18.
+//  Copyright © 2015年 李永方. All rights reserved.
+//
+
+#ifndef YFPrefixHeader_pch
+#define YFPrefixHeader_pch
+#import "HMStatusBarHUD.h"
+#import <EaseMobSDK/EaseMob.h>
+
+#endif /* YFPrefixHeader_pch */

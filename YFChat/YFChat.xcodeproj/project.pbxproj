@@ -58,6 +58,7 @@
 		1C4D311C1C23DFD500680264 /* HMStatusBarHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HMStatusBarHUD.bundle; sourceTree = "<group>"; };
 		1C4D311D1C23DFD500680264 /* HMStatusBarHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMStatusBarHUD.h; sourceTree = "<group>"; };
 		1C4D311E1C23DFD500680264 /* libHMStatusBarHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libHMStatusBarHUD.a; sourceTree = "<group>"; };
+		1C4D31211C23E06B00680264 /* YFPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFPrefixHeader.pch; sourceTree = "<group>"; };
 		1CA1AFEB1C22A0F300ECD28F /* YFChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YFChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CA1AFEF1C22A0F300ECD28F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1CA1AFF11C22A0F300ECD28F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -174,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				1CA1AFEF1C22A0F300ECD28F /* main.m */,
+				1C4D31211C23E06B00680264 /* YFPrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -545,6 +547,7 @@
 			baseConfigurationReference = 183A5E1242374507A168FFD5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YFChat/YFPrefixHeader.pch";
 				INFOPLIST_FILE = YFChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -563,6 +566,7 @@
 			baseConfigurationReference = F8B7C6B219166E4E0542FDA0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YFChat/YFPrefixHeader.pch";
 				INFOPLIST_FILE = YFChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
