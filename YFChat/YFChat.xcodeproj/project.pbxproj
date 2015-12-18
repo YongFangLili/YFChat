@@ -15,6 +15,8 @@
 		1C4D31151C23149700680264 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4D31141C23149700680264 /* libiconv.tbd */; };
 		1C4D31171C2314A500680264 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4D31161C2314A500680264 /* libz.tbd */; };
 		1C4D31191C2314B200680264 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4D31181C2314B200680264 /* libresolv.tbd */; };
+		1C4D311F1C23DFD500680264 /* HMStatusBarHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1C4D311C1C23DFD500680264 /* HMStatusBarHUD.bundle */; };
+		1C4D31201C23DFD500680264 /* libHMStatusBarHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4D311E1C23DFD500680264 /* libHMStatusBarHUD.a */; };
 		1CA1AFF01C22A0F300ECD28F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA1AFEF1C22A0F300ECD28F /* main.m */; };
 		1CA1AFF31C22A0F300ECD28F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA1AFF21C22A0F300ECD28F /* AppDelegate.m */; };
 		1CA1AFF61C22A0F300ECD28F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA1AFF51C22A0F300ECD28F /* ViewController.m */; };
@@ -53,6 +55,9 @@
 		1C4D31141C23149700680264 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		1C4D31161C2314A500680264 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		1C4D31181C2314B200680264 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		1C4D311C1C23DFD500680264 /* HMStatusBarHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HMStatusBarHUD.bundle; sourceTree = "<group>"; };
+		1C4D311D1C23DFD500680264 /* HMStatusBarHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMStatusBarHUD.h; sourceTree = "<group>"; };
+		1C4D311E1C23DFD500680264 /* libHMStatusBarHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libHMStatusBarHUD.a; sourceTree = "<group>"; };
 		1CA1AFEB1C22A0F300ECD28F /* YFChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YFChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CA1AFEF1C22A0F300ECD28F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1CA1AFF11C22A0F300ECD28F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C4D31201C23DFD500680264 /* libHMStatusBarHUD.a in Frameworks */,
 				1C4D31191C2314B200680264 /* libresolv.tbd in Frameworks */,
 				1C4D31171C2314A500680264 /* libz.tbd in Frameworks */,
 				1C4D31151C23149700680264 /* libiconv.tbd in Frameworks */,
@@ -107,6 +113,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C4D311A1C23DFC800680264 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				1C4D311B1C23DFD500680264 /* HMStatusBarHUD库文件 */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		1C4D311B1C23DFD500680264 /* HMStatusBarHUD库文件 */ = {
+			isa = PBXGroup;
+			children = (
+				1C4D311C1C23DFD500680264 /* HMStatusBarHUD.bundle */,
+				1C4D311D1C23DFD500680264 /* HMStatusBarHUD.h */,
+				1C4D311E1C23DFD500680264 /* libHMStatusBarHUD.a */,
+			);
+			path = "HMStatusBarHUD库文件";
+			sourceTree = "<group>";
+		};
 		1CA1AFE21C22A0F300ECD28F = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +156,7 @@
 		1CA1AFED1C22A0F300ECD28F /* YFChat */ = {
 			isa = PBXGroup;
 			children = (
+				1C4D311A1C23DFC800680264 /* lib */,
 				1CA1AFF11C22A0F300ECD28F /* AppDelegate.h */,
 				1CA1AFF21C22A0F300ECD28F /* AppDelegate.m */,
 				1CA1AFF41C22A0F300ECD28F /* ViewController.h */,
@@ -302,6 +327,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C4D311F1C23DFD500680264 /* HMStatusBarHUD.bundle in Resources */,
 				1CA1AFFE1C22A0F300ECD28F /* LaunchScreen.storyboard in Resources */,
 				1CA1AFFB1C22A0F300ECD28F /* Assets.xcassets in Resources */,
 				1CA1AFF91C22A0F300ECD28F /* Main.storyboard in Resources */,
@@ -525,6 +551,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/YFChat/EaseMobSDK/lib",
 					"$(PROJECT_DIR)/YFChat/lib",
+					"$(PROJECT_DIR)/YFChat/HMStatusBarHUD库文件",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.heima-lyf1.YFChat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -542,6 +569,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/YFChat/EaseMobSDK/lib",
 					"$(PROJECT_DIR)/YFChat/lib",
+					"$(PROJECT_DIR)/YFChat/HMStatusBarHUD库文件",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.heima-lyf1.YFChat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
