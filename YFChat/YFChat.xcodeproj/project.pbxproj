@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C4D310B1C23141100680264 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4D310A1C23141100680264 /* MobileCoreServices.framework */; };
+		1C4D310D1C23142700680264 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4D310C1C23142700680264 /* CFNetwork.framework */; };
+		1C4D310F1C23146C00680264 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4D310E1C23146C00680264 /* libstdc++.6.0.9.tbd */; };
+		1C4D31111C23147C00680264 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4D31101C23147C00680264 /* libsqlite3.tbd */; };
+		1C4D31131C23148600680264 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4D31121C23148600680264 /* libxml2.tbd */; };
+		1C4D31151C23149700680264 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4D31141C23149700680264 /* libiconv.tbd */; };
+		1C4D31171C2314A500680264 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4D31161C2314A500680264 /* libz.tbd */; };
+		1C4D31191C2314B200680264 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4D31181C2314B200680264 /* libresolv.tbd */; };
 		1CA1AFF01C22A0F300ECD28F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA1AFEF1C22A0F300ECD28F /* main.m */; };
 		1CA1AFF31C22A0F300ECD28F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA1AFF21C22A0F300ECD28F /* AppDelegate.m */; };
 		1CA1AFF61C22A0F300ECD28F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA1AFF51C22A0F300ECD28F /* ViewController.m */; };
@@ -37,6 +45,14 @@
 
 /* Begin PBXFileReference section */
 		183A5E1242374507A168FFD5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		1C4D310A1C23141100680264 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		1C4D310C1C23142700680264 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		1C4D310E1C23146C00680264 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		1C4D31101C23147C00680264 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		1C4D31121C23148600680264 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		1C4D31141C23149700680264 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		1C4D31161C2314A500680264 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		1C4D31181C2314B200680264 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		1CA1AFEB1C22A0F300ECD28F /* YFChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YFChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CA1AFEF1C22A0F300ECD28F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1CA1AFF11C22A0F300ECD28F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +78,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C4D31191C2314B200680264 /* libresolv.tbd in Frameworks */,
+				1C4D31171C2314A500680264 /* libz.tbd in Frameworks */,
+				1C4D31151C23149700680264 /* libiconv.tbd in Frameworks */,
+				1C4D31131C23148600680264 /* libxml2.tbd in Frameworks */,
+				1C4D31111C23147C00680264 /* libsqlite3.tbd in Frameworks */,
+				1C4D310F1C23146C00680264 /* libstdc++.6.0.9.tbd in Frameworks */,
+				1C4D310D1C23142700680264 /* CFNetwork.framework in Frameworks */,
+				1C4D310B1C23141100680264 /* MobileCoreServices.framework in Frameworks */,
 				F84C558A5E6DBE56E5FDFF0B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,6 +174,14 @@
 		56E830479F9B042632133D51 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1C4D31181C2314B200680264 /* libresolv.tbd */,
+				1C4D31161C2314A500680264 /* libz.tbd */,
+				1C4D31141C23149700680264 /* libiconv.tbd */,
+				1C4D31121C23148600680264 /* libxml2.tbd */,
+				1C4D31101C23147C00680264 /* libsqlite3.tbd */,
+				1C4D310E1C23146C00680264 /* libstdc++.6.0.9.tbd */,
+				1C4D310C1C23142700680264 /* CFNetwork.framework */,
+				1C4D310A1C23141100680264 /* MobileCoreServices.framework */,
 				65094F0305E4A9E1DAA75577 /* libPods.a */,
 			);
 			name = Frameworks;
