@@ -34,6 +34,7 @@
 //    } onQueue:nil];
     
     [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:_accountText.text password:_pwdaccount.text completion:^(NSDictionary *loginInfo, EMError *error) {
+        NSLog(@"%@----%@",_accountText.text,_pwdaccount.text);
         if (!error) {
             [HMStatusBarHUD showSuccess:@"登陆成功"];
             NSLog(@"登录成功 %@",loginInfo);
@@ -52,7 +53,7 @@
 //注册
 - (IBAction)regesterButton:(id)sender {
     
-    [[EaseMob sharedInstance].chatManager asyncRegisterNewAccount:_accountText.text password:_accountText.text withCompletion:^(NSString *username, NSString *password, EMError *error) {
+    [[EaseMob sharedInstance].chatManager asyncRegisterNewAccount:_accountText.text password:_pwdaccount.text withCompletion:^(NSString *username, NSString *password, EMError *error) {
         
         if (!error){
             [HMStatusBarHUD showSuccess:@"注册成功"];
