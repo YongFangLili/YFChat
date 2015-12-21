@@ -63,8 +63,8 @@
 		1CA1AFEF1C22A0F300ECD28F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1CA1AFF11C22A0F300ECD28F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1CA1AFF21C22A0F300ECD28F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1CA1AFF41C22A0F300ECD28F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1CA1AFF51C22A0F300ECD28F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1CA1AFF41C22A0F300ECD28F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
+		1CA1AFF51C22A0F300ECD28F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
 		1CA1AFF81C22A0F300ECD28F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1CA1AFFA1C22A0F300ECD28F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CA1AFFD1C22A0F300ECD28F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -158,11 +158,11 @@
 			isa = PBXGroup;
 			children = (
 				1C4D311A1C23DFC800680264 /* lib */,
+				1CAD414E1C27D9B8009F2BBA /* Login */,
+				1CAD414F1C27D9E4009F2BBA /* Mine */,
+				1CAD41501C27DA12009F2BBA /* Chat */,
 				1CA1AFF11C22A0F300ECD28F /* AppDelegate.h */,
 				1CA1AFF21C22A0F300ECD28F /* AppDelegate.m */,
-				1CA1AFF41C22A0F300ECD28F /* ViewController.h */,
-				1CA1AFF51C22A0F300ECD28F /* ViewController.m */,
-				1CA1AFF71C22A0F300ECD28F /* Main.storyboard */,
 				1CA1AFFA1C22A0F300ECD28F /* Assets.xcassets */,
 				1CA1AFFC1C22A0F300ECD28F /* LaunchScreen.storyboard */,
 				1CA1AFFF1C22A0F300ECD28F /* Info.plist */,
@@ -196,6 +196,32 @@
 				1CA1B0151C22A0F300ECD28F /* Info.plist */,
 			);
 			path = YFChatUITests;
+			sourceTree = "<group>";
+		};
+		1CAD414E1C27D9B8009F2BBA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1CA1AFF41C22A0F300ECD28F /* ViewController.h */,
+				1CA1AFF51C22A0F300ECD28F /* ViewController.m */,
+				1CA1AFF71C22A0F300ECD28F /* Main.storyboard */,
+			);
+			name = Login;
+			path = "HMStatusBarHUD库文件";
+			sourceTree = "<group>";
+		};
+		1CAD414F1C27D9E4009F2BBA /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Mine;
+			path = "HMStatusBarHUD库文件";
+			sourceTree = "<group>";
+		};
+		1CAD41501C27DA12009F2BBA /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Chat;
 			sourceTree = "<group>";
 		};
 		56E830479F9B042632133D51 /* Frameworks */ = {
@@ -449,6 +475,7 @@
 				1CA1AFF81C22A0F300ECD28F /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		1CA1AFFC1C22A0F300ECD28F /* LaunchScreen.storyboard */ = {

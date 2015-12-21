@@ -11,4 +11,13 @@
 #import "HMStatusBarHUD.h"
 #import <EaseMobSDK/EaseMob.h>
 
+//登录状态
+#define KNOTIFICATION_LOGINCHANGE @"loginStateChange"
+
+//login info
+#define kSDKPassword   @"password"
+#define kSDKUsername   @"username"
+#define kSDKToken      @"token"
+
+
 #endif /* YFPrefixHeader_pch */
