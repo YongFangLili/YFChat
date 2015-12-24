@@ -75,10 +75,11 @@
                      NSLog(@"-------%s",__func__);
                     //发送自动登录状态通知的状态
                     [[NSNotificationCenter defaultCenter] postNotificationName:KNOTIFICATION_LOGINCHANGE object:@YES userInfo:loginInfo];
+                    [HMStatusBarHUD showSuccess:@"登录成功"];
                 }
             } onQueue:nil];
         
-        [HMStatusBarHUD showSuccess:@"登录成功"];
+        
         //用单例保存用户登录信息
         [UserInfoManager sharedUserInfoManager].UserInfo = loginInfo;
        
@@ -145,22 +146,20 @@
 -(void)MineChat:(NSNotification *)Notification {
     
     NSLog(@"%@",Notification);
-    
-    
     YFMainChatViewController *ChatVC = [[YFMainChatViewController alloc]init];
     ChatVC.view.backgroundColor = [UIColor redColor];
     ChatVC.userInfo = Notification.userInfo;
     [self.navigationController pushViewController:ChatVC animated:YES];
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-     YFMainChatViewController *ChatVC = [[YFMainChatViewController alloc]init];
-    ChatVC = segue.destinationViewController;
-    ChatVC.userInfo = self.userInfo;
-
-
-}
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    
+//     YFMainChatViewController *ChatVC = [[YFMainChatViewController alloc]init];
+//    ChatVC = segue.destinationViewController;
+//    ChatVC.userInfo = self.userInfo;
+//
+//
+//}
 
 
 - (void)didReceiveMemoryWarning {

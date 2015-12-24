@@ -34,10 +34,6 @@
                 _friendsList = buddyList;
                 
             }
-            //            for (EMBuddy *budy in self.friends) {
-            //
-            //                NSLog(@"%@",budy);
-            //            }
         } onQueue:nil];
         
         

@@ -1,13 +1,13 @@
 //
-//  YFChatRoomViewController.m
+//  YFChatRoomController.h
 //  YFChat
 //
 //  Created by 李永方 on 15/12/24.
 //  Copyright © 2015年 李永方. All rights reserved.
 //
 
-#import "YFChatRoomViewController.h"
+#import <UIKit/UIKit.h>
 
-@implementation YFChatRoomViewController
+@interface YFChatRoomController : UITableViewController
 
 @end
