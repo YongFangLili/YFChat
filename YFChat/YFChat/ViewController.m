@@ -20,18 +20,18 @@
 
 @implementation ViewController
 
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     //注册一个通知，用于登录的通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(MineChat:) name:KNOTIFICATION_LOGINCHANGE object:nil];
-   
-    
     NSLog(@"打印iOS环信SDK版本号：%@",[EaseMob sharedInstance].sdkVersion);
-    // Do any additional setup after loading the view, typically from a nib.
+    //从沙盒中获取账号与密码
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    if (ud != nil) {
+        self.accountText.text = [ud objectForKey:@"em_lastLogin_username"];
+    }
+    
 }
-
 
 
 - (IBAction)LoginButton:(id)sender {
@@ -72,22 +72,19 @@
                 if (!error) {
                     NSLog(@"获取成功 -- %@",buddyList);
                     [UserInfoManager sharedUserInfoManager].friendsList = buddyList;
-                    
+                     NSLog(@"-------%s",__func__);
+                    //发送自动登录状态通知的状态
+                    [[NSNotificationCenter defaultCenter] postNotificationName:KNOTIFICATION_LOGINCHANGE object:@YES userInfo:loginInfo];
                 }
-                //            for (EMBuddy *budy in self.friends) {
-                //
-                //                NSLog(@"%@",budy);
-                //            }
             } onQueue:nil];
-   
         
         [HMStatusBarHUD showSuccess:@"登录成功"];
         //用单例保存用户登录信息
         [UserInfoManager sharedUserInfoManager].UserInfo = loginInfo;
        
         
-        //发送自动登录状态通知的状态
-        [[NSNotificationCenter defaultCenter] postNotificationName:KNOTIFICATION_LOGINCHANGE object:@YES userInfo:loginInfo];
+//        //发送自动登录状态通知的状态
+//        [[NSNotificationCenter defaultCenter] postNotificationName:KNOTIFICATION_LOGINCHANGE object:@YES userInfo:loginInfo];
             
         //保存最近一次登录用户名
         [self saveLastLoginUsername];
@@ -102,10 +99,7 @@
                 NSLog(@"-------》%@",loginInfo);
                 [HMStatusBarHUD showError:@"登录失败,网络不给力哦"];
                 NSLog(@"登录失败 %ld",(long)error.errorCode);
-        
-        
-        
-        
+
                 }
             }
         
@@ -124,6 +118,7 @@
         NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
         [ud setObject:username forKey:[NSString stringWithFormat:@"em_lastLogin_%@",kSDKUsername]];
         [ud synchronize];
+        NSLog(@"%@",NSHomeDirectory());
     }
 }
 

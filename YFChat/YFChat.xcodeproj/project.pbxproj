@@ -27,6 +27,7 @@
 		1CA1B0141C22A0F300ECD28F /* YFChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA1B0131C22A0F300ECD28F /* YFChatUITests.m */; };
 		1CAD41921C2AB0BE009F2BBA /* YFMainChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAD41911C2AB0BE009F2BBA /* YFMainChatViewController.m */; };
 		1CAD41A11C2BA2C8009F2BBA /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAD41A01C2BA2C8009F2BBA /* UserInfoManager.m */; };
+		1CAD41A41C2BDCE0009F2BBA /* YFChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAD41A31C2BDCE0009F2BBA /* YFChatRoomViewController.m */; };
 		F84C558A5E6DBE56E5FDFF0B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65094F0305E4A9E1DAA75577 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,8 @@
 		1CAD41911C2AB0BE009F2BBA /* YFMainChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YFMainChatViewController.m; path = YFChat/YFMainChatViewController.m; sourceTree = SOURCE_ROOT; };
 		1CAD419F1C2BA2C8009F2BBA /* UserInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoManager.h; sourceTree = "<group>"; };
 		1CAD41A01C2BA2C8009F2BBA /* UserInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoManager.m; sourceTree = "<group>"; };
+		1CAD41A21C2BDCE0009F2BBA /* YFChatRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFChatRoomViewController.h; sourceTree = "<group>"; };
+		1CAD41A31C2BDCE0009F2BBA /* YFChatRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFChatRoomViewController.m; sourceTree = "<group>"; };
 		65094F0305E4A9E1DAA75577 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B7C6B219166E4E0542FDA0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -230,6 +233,8 @@
 		1CAD41501C27DA12009F2BBA /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				1CAD41A21C2BDCE0009F2BBA /* YFChatRoomViewController.h */,
+				1CAD41A31C2BDCE0009F2BBA /* YFChatRoomViewController.m */,
 			);
 			name = Chat;
 			sourceTree = "<group>";
@@ -445,6 +450,7 @@
 				1CAD41921C2AB0BE009F2BBA /* YFMainChatViewController.m in Sources */,
 				1CA1AFF61C22A0F300ECD28F /* ViewController.m in Sources */,
 				1CA1AFF31C22A0F300ECD28F /* AppDelegate.m in Sources */,
+				1CAD41A41C2BDCE0009F2BBA /* YFChatRoomViewController.m in Sources */,
 				1CA1AFF01C22A0F300ECD28F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

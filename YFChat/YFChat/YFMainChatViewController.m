@@ -41,36 +41,19 @@
 
 - (void)viewDidLoad {
     
+    [super viewDidLoad];
+    
+    NSLog(@"-------%s",__func__);
+    //获取用户信息
+    
    self.title = [UserInfoManager sharedUserInfoManager].UserInfo[@"username"];
+   self.friends = [UserInfoManager sharedUserInfoManager].friendsList;
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"freindsList"];
-    
-   
 }
 
-- (void)viewWillAppear:(BOOL)animated {
 
-    [super viewDidLoad];
-    self.friends = [UserInfoManager sharedUserInfoManager].friendsList;
 
-    /**
-//    [[EaseMob sharedInstance].chatManager asyncFetchBuddyListWithCompletion:^(NSArray *buddyList, EMError *error) {
-//        if (!error) {
-//            NSLog(@"获取成功 -- %@",buddyList);
-//            self.friends = buddyList;
-//        
-//        }
-//        for (EMBuddy *budy in self.friends) {
-//            
-//            NSLog(@"%@",budy);
-//        }
-//    } onQueue:nil];
-//    
-    
-
-}
-     */
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
