@@ -7,17 +7,26 @@
 //
 
 #import "ViewController.h"
+#import "YFMainChatViewController.h"
+#import "UserInfoManager.h"
+
 @interface ViewController ()<IChatManagerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *accountText;
 @property (weak, nonatomic) IBOutlet UITextField *pwdaccount;
+@property (strong, nonatomic) NSDictionary *userInfo;
+@property (strong , nonatomic) NSArray *friendList;
 
 @end
 
 @implementation ViewController
 
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //注册一个通知，用于登录的通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(MineChat:) name:KNOTIFICATION_LOGINCHANGE object:nil];
+   
     
     NSLog(@"打印iOS环信SDK版本号：%@",[EaseMob sharedInstance].sdkVersion);
     // Do any additional setup after loading the view, typically from a nib.
@@ -33,26 +42,10 @@
     if (_pwdaccount.text.length == 0) {
         return;
     }
-    
-//    [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:_accountText.text password:_pwdaccount.text completion:^(NSDictionary *loginInfo, EMError *error) {
-//        NSLog(@"%@----%@",_accountText.text,_pwdaccount.text);
-//        if (!error) {
-//            [HMStatusBarHUD showSuccess:@"登陆成功"];
-//            NSLog(@"登录成功 %@",loginInfo);
-//
-//        }else{
-//            if (error.errorCode == EMErrorServerAuthenticationFailure) {
-//                [HMStatusBarHUD showError:@"您输入的用户名或者密码错误！"];
-//                
-//            }else{
-//             NSLog(@"-------》%@",loginInfo);
-//            [HMStatusBarHUD showError:@"登录失败,网络不给力哦"];
-//            NSLog(@"登录失败 %ld",(long)error.errorCode);
-//            }
-//        
-//        }
-//    } onQueue:nil];
+
     [self loginWithUserName:_accountText.text password:_pwdaccount.text];
+
+
 }
 
 //点击登录后的操作
@@ -72,15 +65,33 @@
         
         //获取群组列表
         [[EaseMob sharedInstance].chatManager asyncFetchMyGroupsList];
+        //获取好友列表
+//        [[EaseMob sharedInstance].chatManager asyncFetchBuddyList];
+            
+            [[EaseMob sharedInstance].chatManager asyncFetchBuddyListWithCompletion:^(NSArray *buddyList, EMError *error) {
+                if (!error) {
+                    NSLog(@"获取成功 -- %@",buddyList);
+                    [UserInfoManager sharedUserInfoManager].friendsList = buddyList;
+                    
+                }
+                //            for (EMBuddy *budy in self.friends) {
+                //
+                //                NSLog(@"%@",budy);
+                //            }
+            } onQueue:nil];
+   
+        
         [HMStatusBarHUD showSuccess:@"登录成功"];
+        //用单例保存用户登录信息
+        [UserInfoManager sharedUserInfoManager].UserInfo = loginInfo;
+       
         
         //发送自动登录状态通知的状态
-        [[NSNotificationCenter defaultCenter] postNotificationName:KNOTIFICATION_LOGINCHANGE object:@YES];
+        [[NSNotificationCenter defaultCenter] postNotificationName:KNOTIFICATION_LOGINCHANGE object:@YES userInfo:loginInfo];
+            
         //保存最近一次登录用户名
         [self saveLastLoginUsername];
         
-        
-            
         }else{
             
             
@@ -101,6 +112,8 @@
     } onQueue:nil];
 
 }
+
+//获取好友列表
 
 ///保存登录的用户名
 - (void)saveLastLoginUsername
@@ -132,6 +145,27 @@
 }
 
 
+//进入到我的主页界面
+
+-(void)MineChat:(NSNotification *)Notification {
+    
+    NSLog(@"%@",Notification);
+    
+    
+    YFMainChatViewController *ChatVC = [[YFMainChatViewController alloc]init];
+    ChatVC.view.backgroundColor = [UIColor redColor];
+    ChatVC.userInfo = Notification.userInfo;
+    [self.navigationController pushViewController:ChatVC animated:YES];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+     YFMainChatViewController *ChatVC = [[YFMainChatViewController alloc]init];
+    ChatVC = segue.destinationViewController;
+    ChatVC.userInfo = self.userInfo;
+
+
+}
 
 
 - (void)didReceiveMemoryWarning {
