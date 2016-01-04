@@ -28,6 +28,8 @@
 		1CAD41921C2AB0BE009F2BBA /* YFMainChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAD41911C2AB0BE009F2BBA /* YFMainChatViewController.m */; };
 		1CAD41A11C2BA2C8009F2BBA /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAD41A01C2BA2C8009F2BBA /* UserInfoManager.m */; };
 		1CAD41AA1C2BF7B6009F2BBA /* YFChatRoomController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAD41A91C2BF7B6009F2BBA /* YFChatRoomController.m */; };
+		1CAD41EC1C33D9A0009F2BBA /* YFChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAD41EB1C33D9A0009F2BBA /* YFChatCell.m */; };
+		1CAD41F21C33DCC9009F2BBA /* NSString+HMNSStringExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAD41F11C33DCC9009F2BBA /* NSString+HMNSStringExt.m */; };
 		F84C558A5E6DBE56E5FDFF0B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65094F0305E4A9E1DAA75577 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +86,10 @@
 		1CAD41A01C2BA2C8009F2BBA /* UserInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoManager.m; sourceTree = "<group>"; };
 		1CAD41A81C2BF7B6009F2BBA /* YFChatRoomController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFChatRoomController.h; sourceTree = "<group>"; };
 		1CAD41A91C2BF7B6009F2BBA /* YFChatRoomController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFChatRoomController.m; sourceTree = "<group>"; };
+		1CAD41EA1C33D9A0009F2BBA /* YFChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFChatCell.h; sourceTree = "<group>"; };
+		1CAD41EB1C33D9A0009F2BBA /* YFChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFChatCell.m; sourceTree = "<group>"; };
+		1CAD41F01C33DCC9009F2BBA /* NSString+HMNSStringExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HMNSStringExt.h"; sourceTree = "<group>"; };
+		1CAD41F11C33DCC9009F2BBA /* NSString+HMNSStringExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HMNSStringExt.m"; sourceTree = "<group>"; };
 		65094F0305E4A9E1DAA75577 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B7C6B219166E4E0542FDA0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +132,8 @@
 		1C4D311A1C23DFC800680264 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				1CAD41F01C33DCC9009F2BBA /* NSString+HMNSStringExt.h */,
+				1CAD41F11C33DCC9009F2BBA /* NSString+HMNSStringExt.m */,
 				1C4D311B1C23DFD500680264 /* HMStatusBarHUD库文件 */,
 			);
 			name = lib;
@@ -235,6 +243,8 @@
 			children = (
 				1CAD41A81C2BF7B6009F2BBA /* YFChatRoomController.h */,
 				1CAD41A91C2BF7B6009F2BBA /* YFChatRoomController.m */,
+				1CAD41EA1C33D9A0009F2BBA /* YFChatCell.h */,
+				1CAD41EB1C33D9A0009F2BBA /* YFChatCell.m */,
 			);
 			name = Chat;
 			sourceTree = "<group>";
@@ -448,6 +458,8 @@
 			files = (
 				1CAD41A11C2BA2C8009F2BBA /* UserInfoManager.m in Sources */,
 				1CAD41AA1C2BF7B6009F2BBA /* YFChatRoomController.m in Sources */,
+				1CAD41EC1C33D9A0009F2BBA /* YFChatCell.m in Sources */,
+				1CAD41F21C33DCC9009F2BBA /* NSString+HMNSStringExt.m in Sources */,
 				1CAD41921C2AB0BE009F2BBA /* YFMainChatViewController.m in Sources */,
 				1CA1AFF61C22A0F300ECD28F /* ViewController.m in Sources */,
 				1CA1AFF31C22A0F300ECD28F /* AppDelegate.m in Sources */,

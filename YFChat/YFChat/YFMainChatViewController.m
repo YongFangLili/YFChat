@@ -96,9 +96,8 @@
     chatVC.title = [NSString stringWithFormat:@"正在和%@聊天", budy.username];
     
     [self.navigationController pushViewController:chatVC animated:YES];
-    
-    
-    
+
+
 }
 
 
